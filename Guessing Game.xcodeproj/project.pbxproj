@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		786A7474216E879D00F50073 /* selectDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A7473216E879D00F50073 /* selectDifficultyViewController.swift */; };
+		788E86BE216FD4230028F035 /* CustomSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788E86BD216FD4230028F035 /* CustomSetupViewController.swift */; };
 		7896B3AF216BD6DF00BA7278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896B3AE216BD6DF00BA7278 /* AppDelegate.swift */; };
 		7896B3B1216BD6DF00BA7278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896B3B0216BD6DF00BA7278 /* ViewController.swift */; };
 		7896B3B4216BD6DF00BA7278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7896B3B2216BD6DF00BA7278 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		786A7473216E879D00F50073 /* selectDifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectDifficultyViewController.swift; sourceTree = "<group>"; };
+		788E86BD216FD4230028F035 /* CustomSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSetupViewController.swift; sourceTree = "<group>"; };
 		7896B3AB216BD6DF00BA7278 /* Guessing Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guessing Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7896B3AE216BD6DF00BA7278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7896B3B0216BD6DF00BA7278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				7896B3AE216BD6DF00BA7278 /* AppDelegate.swift */,
+				786A7473216E879D00F50073 /* selectDifficultyViewController.swift */,
 				7896B3B0216BD6DF00BA7278 /* ViewController.swift */,
 				7896B3B2216BD6DF00BA7278 /* Main.storyboard */,
 				7896B3B5216BD6E000BA7278 /* Assets.xcassets */,
 				7896B3B7216BD6E000BA7278 /* LaunchScreen.storyboard */,
 				7896B3BA216BD6E000BA7278 /* Info.plist */,
+				788E86BD216FD4230028F035 /* CustomSetupViewController.swift */,
 			);
 			path = "Guessing Game";
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786A7474216E879D00F50073 /* selectDifficultyViewController.swift in Sources */,
+				788E86BE216FD4230028F035 /* CustomSetupViewController.swift in Sources */,
 				7896B3B1216BD6DF00BA7278 /* ViewController.swift in Sources */,
 				7896B3AF216BD6DF00BA7278 /* AppDelegate.swift in Sources */,
 			);
