@@ -37,14 +37,10 @@ class ViewController: UIViewController {
     
     //Mark: Functions
     
-    
-    
-    func setupUIForRestart() {
+func setupUIForRestart() {
         guessTextField.isEnabled = false
         guessButton.isHidden = true
         playAgainButton.isHidden = false
-        
-        
     }
     
     //This function will load at the start of the application and when you press the play again button.
@@ -112,6 +108,11 @@ class ViewController: UIViewController {
     
     @IBAction func playAgainButtonPressed(_ sender: Any) {
         restart()
+    }
+    
+    
+    @IBAction func clearTextButton(_ sender: Any) {
+        guessTextField.text = ""
     }
     
     //Mark: Properties
