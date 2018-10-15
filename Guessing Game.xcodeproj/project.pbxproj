@@ -61,11 +61,11 @@
 				7896B3AE216BD6DF00BA7278 /* AppDelegate.swift */,
 				786A7473216E879D00F50073 /* selectDifficultyViewController.swift */,
 				7896B3B0216BD6DF00BA7278 /* ViewController.swift */,
+				788E86BD216FD4230028F035 /* CustomSetupViewController.swift */,
 				7896B3B2216BD6DF00BA7278 /* Main.storyboard */,
 				7896B3B5216BD6E000BA7278 /* Assets.xcassets */,
 				7896B3B7216BD6E000BA7278 /* LaunchScreen.storyboard */,
 				7896B3BA216BD6E000BA7278 /* Info.plist */,
-				788E86BD216FD4230028F035 /* CustomSetupViewController.swift */,
 			);
 			path = "Guessing Game";
 			sourceTree = "<group>";

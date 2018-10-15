@@ -8,20 +8,21 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
     
 
     //Mark: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        restart()
-        }
+        restart() //Call this function to initialize all important variables based on the difficulty chosen
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+       }
     
    
     //Mark IBOutlets
-    
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var guessRemainingLabel: UILabel!
     @IBOutlet weak var feedBackLabel: UILabel!
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
     
     //Mark: Functions
     
+    
+    
     func setupUIForRestart() {
         guessTextField.isEnabled = false
         guessButton.isHidden = true
@@ -44,10 +47,13 @@ class ViewController: UIViewController {
         
     }
     
+    //This function will load at the start of the application and when you press the play again button.
+    
     func restart() {
         // new random number
-        randomNumber = Int.random(in: minimumNumber...maximumNumber)
+        randomNumber = Int.random(in: minimumNumber...maximumNumber) //Sets up a new random number everytime the function is called
         // reset guesses remaining
+        guessesRemaining = numberOfGuesses
         guessRemainingLabel.text = "\(guessesRemaining) Guesses Remaining"
         // clear text field
         guessTextField.text = ""
@@ -61,10 +67,11 @@ class ViewController: UIViewController {
         feedBackLabel.text = "You guessed..."
         instructionLabel.text = "Please enter a number between \(minimumNumber) and \(maximumNumber)"
         }
+
     
     //Mark: IBActions
     
-    @IBAction func guessButton(_ sender: Any) {
+    @IBAction func guessButton(_ sender: Any) { //This function contains everything that will happen once the guess button is pressed
         
        let userInput = guessTextField.text!
         
@@ -74,12 +81,12 @@ class ViewController: UIViewController {
         
         }
         
-        guard guess >= 1 && guess <= maximumNumber else {
+        guard guess >= 1 && guess <= maximumNumber else { //input validaation for guess range, with 1 as a default minimum number.
             feedBackLabel.text = "Please enter a number \(minimumNumber)-\(maximumNumber) chief 😺"
             return
         }
         
-        if guess == randomNumber {
+        if guess == randomNumber { //These if else statements decide what happens if the guess the user entered is equal to, less than, or greater than the randomly generated number. 
             feedBackLabel.text = "You win 😄"
             setupUIForRestart()
             } else if guess < randomNumber {
@@ -93,7 +100,7 @@ class ViewController: UIViewController {
                 guessTextField.text = ""
             }
         
-        if guessesRemaining == 0 {
+        if guessesRemaining == 0 { //Once the user runs out of guesses, they lose and the game will be setup for restart.
             feedBackLabel.text = "You lose chief 😭. The correct number was \(randomNumber)."
             setupUIForRestart()
            
@@ -101,6 +108,11 @@ class ViewController: UIViewController {
         
         guessRemainingLabel.text = "\(String(guessesRemaining)) Guesses Remaining."
        }
+    
+    
+    @IBAction func playAgainButtonPressed(_ sender: Any) {
+        restart()
+    }
     
     //Mark: Properties
     var minimumNumber = 1
@@ -112,9 +124,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func playAgainButtonPressed(_ sender: Any) {
-        restart()
-    }
+    
     
     
 }
